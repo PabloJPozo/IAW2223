@@ -13,7 +13,7 @@ Alumno: Pablo Jesús Pozo
 
 > "Esto es un ejemplo de lo que se puede hacer en markdown"
 > 
-> Pablo
+> -Pablo
 
 
 Aquí también podemos poner las letras **subrayadas**, en *cursiva* o ~~tachadas~~
