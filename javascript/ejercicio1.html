@@ -4,21 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="ejercicio1.css">
-    <script src="ejercicio1.js"> </script>
+    <title>Circulos</title>
+    <script src="ejercicio1.js"></script>
+    <style>
+    
+        #roja {
+            width:200px;
+            height:200px;
+            border-radius: 50%;
+            background-color:red;
+        }
+        #azul {
+            width:200px;
+            height:200px;
+            border-radius: 50%;
+            background-color:blue;
+        }
+        #verde {
+            width:200px;
+            height:200px;
+            border-radius: 50%;
+            background-color:green;
+        }
+    </style>
 </head>
 <body>
-    <div class="contenedor">
-        <div id="rojo" class="crojo"></div>
-        <div id="azul" class="cazul"></div>
-        <div id="amarillo" class="camarillo"></div>
-    </div>
-    <div class="contenedor">
-        <div class="boton"><button onclick="ocultarcirculo('rojo')">Ocultar boton</button></div>
-        <div class="boton"><button onclick="ocultarcirculo('azul')">Ocultar boton</button></div>
-        <div class="boton"><button onclick="ocultarcirculo('amarillo')">Ocultar boton</button></div>
-    </div>
+    <table align="center">
+        <tr style="width:200px; height:200px;">
+            <td> <div id="roja"></div></td>
+            <td><div id="azul"></div></td>
+            <td><div id="verde"></div></td>
+        </tr>
+        <tr>
+            <td style="width:200px; height:20px;" align="center"><button onclick="ocultar('roja')">Ocultar roja</button></td>
+            <td style="width:200px; height:20px;" align="center"><button onclick="ocultar('azul')">Ocultar azul</button></td>
+            <td style="width:200px; height:20px;" align="center"><button onclick="ocultar('verde')">Ocultar verde</button></td>
     
+        </tr>
+        <tr style="width:200px; height:20px;">
+            <td style="width:200px; height:20px;" align="center"><button onclick="mostrar('roja')">Mostrar roja</button></td>
+            <td style="width:200px; height:20px;" align="center"><button onclick="mostrar('azul')">Mostrar azul</button></td>
+            <td style="width:200px; height:20px;" align="center"><button onclick="mostrar('verde')">Mostrar verde</button></td>
+    
+        </tr>
+        
+
+    </table>
+       
 </body>
 </html>
