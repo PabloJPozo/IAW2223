@@ -10,8 +10,7 @@ $(document).ready(function () {
         $("#encabezado").show();
         $(".pares").show();
     });
-});
-
+}); 
 
 
 

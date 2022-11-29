@@ -16,7 +16,7 @@
             border-radius: 10px;
         }
     </style>
-    <!-- Incluye aquí jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
     <h1>Las funciones each y append en jQuery</h1>
@@ -30,7 +30,9 @@
     </ul>
 
     <script>
-        /* Rellena aquí el código jQuery */
+        $(document).ready(function(){
+            $("a").prepend("<img src='iconDescarga.png'></img>");
+        });
      </script>
 </body>
 </html>

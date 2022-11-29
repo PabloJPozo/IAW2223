@@ -16,7 +16,7 @@
             border-radius: 10px;
         }
     </style>
-    <!-- Incluye aquí jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
     <h1>getters en jQuery</h1>
@@ -29,15 +29,31 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur voluptate sapiente necessitatibus! <a href=""> Non quisquam </a>quia molestias natus, ipsum deserunt fugit ea voluptatum repellat obcaecati nihil provident. Eos, repudiandae ipsa.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur voluptate sapiente necessitatibus! <a href=""> Non quisquam </a>quia molestias natus, ipsum deserunt fugit ea voluptatum repellat obcaecati nihil provident. Eos, repudiandae ipsa.</p>
     <p id="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur voluptate sapiente necessitatibus! <a href=""> Non quisquam </a>quia molestias natus, ipsum deserunt fugit ea voluptatum repellat obcaecati nihil provident. Eos, repudiandae ipsa.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur voluptate sapiente necessitatibus! <a href=""> Non quisquam </a>quia molestias natus, ipsum deserunt fugit ea voluptatum repellat obcaecati nihil provident. Eos, repudiandae ipsa.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur voluptate sapiente necessitatibus! <a href=""> Non quisquam </a>quia molestias natus, ipsum deserunt fugit ea voluptatum repellat obcaecati nihil provident. Eos, repudiandae <ipsa class="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur voluptate sapiente necessitatibus! <a href=""> Non quisquam </a>quia molestias natus, ipsum deserunt fugit ea voluptatum repellat obcaecati nihil provident. Eos, repudiandae ipsa.
-            "></ipsa>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio corrupti commodi temporibus vitae tempora accusamus, <a href="">illo perferendis eveniet</a> aliquam praesentium molestias quidem atque animi nisi adipisci quasi voluptates ad porro.</p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur voluptate sapiente necessitatibus! <a href=""> Non quisquam </a>quia molestias natus, ipsum deserunt fugit ea voluptatum repellat obcaecati nihil provident. Eos, repudiandae <ipsa class="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur voluptate sapiente necessitatibus! "><a href=""> Non quisquam </a>quia molestias natus, ipsum deserunt fugit ea voluptatum repellat obcaecati nihil provident. Eos, repudiandae ipsa.
+        </ipsa>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio corrupti commodi temporibus vitae tempora accusamus, <a href="">illo perferendis eveniet</a> aliquam praesentium molestias quidem atque animi nisi adipisci quasi voluptates ad porro.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eaque sit nemo! Voluptatem expedita hic ipsam minima eligendi id, labore non veritatis <a href="">atque amet ipsum mollitia</a>  dignissimos? Mollitia, fuga ea!</p>
     <button id="btn-imagen">Obtener src de la imagen</button>
     <button id="btn-encabezado">Obtener texto del encabezado</button>
     <button id="btn-parrafo">Obtener html de un párrafo</button>
 
     <script>
-       /* Rellena aquí el código jQuery */
+       $(document).ready(function(){
+        $("#btn-imagen").click(function(e){
+            e.preventDefault();
+            let imagen = $("img").attr("src");
+            alert(imagen);
+        });
+        $("#btn-encabezado").click(function(e){
+            e.preventDefault();
+            let encabezado = $("h1").text();
+            alert(encabezado);
+        });
+        $("#btn-parrafo").click(function(e){
+            e.preventDefault();
+            let parrafo = $("p").html();
+            alert(parrafo);
+        });
+       });
     </script>
 </body>
 </html>

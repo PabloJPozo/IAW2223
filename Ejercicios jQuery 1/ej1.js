@@ -9,5 +9,5 @@ $(document).ready(function(){
         e.preventDefault();
         $("h1").show();
         $("p").show();
-    });
+    }); 
 });
