@@ -15,7 +15,9 @@
             justify-content: center;
             line-height: 300px;
         }
-        
+        .invisible{
+            color: transparent;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
@@ -25,11 +27,12 @@
         Texto
     </div>
     <button>Vaciar div</button>
+
     <script>
         $(document).ready(function(){
             $("button").click(function(e){
                 e.preventDefault();
-                $("div").empty();
+                $("div").toggleClass("invisible");
             });
         });
     </script>

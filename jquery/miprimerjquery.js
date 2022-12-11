@@ -1,5 +1,5 @@
 /*Esta es la manera larga de decirle al navegador que ejecute el jquery cuando este listo */
-$(Document).ready(function(){
+$(document).ready(function(){
     $("#btn-ocultar").click(function (e) { 
         e.preventDefault();
         $("p").hide(); /*oculto*/

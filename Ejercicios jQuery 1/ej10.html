@@ -20,10 +20,15 @@
 </head>
 <body>
     <h1>El método val() de jQuery</h1>
-    <input type="text" value="">
+    <input id="kk" type="text" value="">
     <button>Ver val()</button>
     <script>
-       /* Incluye aquí el código jQuery */
+       $(document).ready(function(){
+            $("button").click(function(e){
+                e.preventDefault();
+                alert($("kk").val());
+            });
+       });
         
     </script>
 </body>
