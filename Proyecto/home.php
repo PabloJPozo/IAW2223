@@ -13,58 +13,106 @@
 </head>
 <body>
 
-<div class="container">
-    <h1 class="text-center" >Gestión de incidencias IES Antonio Machado</h1>
-      <div class="añadir"><a href="añadir.php" class='btn btn-outline-dark mb-2'> <i class="bi bi-person-plus"></i> Añadir incidencia</a></div>
-        <table class="table table-striped table-bordered table-hover">
-          <thead class="table-dark">
-            <tr>
-              <th  scope="col">ID</th>
-              <th  scope="col">Planta</th>
-              <th  scope="col">Aula</th>
-              <th  scope="col">Descripción</th>
-              <th  scope="col">Fecha alta</th>
-              <th  scope="col">Fecha revisión</th>
-              <th  scope="col">Fecha solución</th>
-              <th  scope="col">Comentario</th>
-              <th  scope="col" colspan="3" class="text-center">Operaciones</th>
-            </tr>  
-          </thead>
-          <tbody>
-            <tr>
- 
-              <?php
-                $query="SELECT * FROM Incidencias";               
-                $vista_incidencias= mysqli_query($conn,$query);
-                while($row= mysqli_fetch_assoc($vista_incidencias)){
-                  $id = $row['id'];                
-                  $planta = $row['planta'];        
-                  $aula = $row['aula'];         
-                  $descripcion = $row['descripcion'];        
-                  $fecha_de_alta = $row['fecha_de_alta'];        
-                  $fecha_de_revision = $row['fecha_de_revision'];        
-                  $fecha_de_resolucion = $row['fecha_de_resolucion'];        
-                  $comentario = $row['comentario']; 
-                  echo "<tr >";
-                  echo " <th scope='row' >{$id}</th>";
-                  echo " <td > {$planta}</td>";
-                  echo " <td > {$aula}</td>";
-                  echo " <td >{$descripcion} </td>";
-                  echo " <td >{$fecha_de_alta} </td>";
-                  echo " <td >{$fecha_de_revision} </td>";
-                  echo " <td >{$fecha_de_resolucion} </td>";
-                  echo " <td >{$comentario} </td>";
-                  echo " <td class='text-center'> <a href='ver.php?incidencia_id={$id}' class='btn btn-primary'> <i class='bi bi-eye'></i> Ver</a> </td>";
-                  echo " <td class='text-center' > <a href='editar.php?editar&incidencia_id={$id}' class='btn btn-secondary'><i class='bi bi-pencil'></i> Editar</a> </td>";
-                  echo " <td class='text-center'>  <a href='eliminar.php?eliminar={$id}' class='btn btn-danger'> <i class='bi bi-trash'></i> Eliminar</a> </td>";
-                  echo " </tr> ";
-                }
-                
-              ?>
-            </tr>  
-          </tbody>
-        </table>
+<div class='ripple-background'>
+  <div class='circle xxlarge shade1'></div>
+  <div class='circle xlarge shade2'></div>
+  <div class='circle large shade3'></div>
+  <div class='circle mediun shade4'></div>
+  <div class='circle small shade5'></div>
 </div>
+
+<div class="container">
+      <h1 class="text-center" >Gestión de incidencias IES Antonio Machado</h1>
+      <div class="añadir">
+        <a class="continue-application" href="añadir.php">
+          <div>
+              <div class="pencil"></div>
+              <div class="folder">
+                  <div class="top">
+                      <svg viewBox="0 0 24 27">
+                          <path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"></path>
+                      </svg>
+                  </div>
+                  <div class="paper"></div>
+              </div>
+          </div>
+          Añadir
+        </a>
+      </div>
+          <table class="table table-striped table-bordered table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th  scope="col">ID</th>
+                <th  scope="col">Planta</th>
+                <th  scope="col">Aula</th>
+                <th  scope="col">Descripción</th>
+                <th  scope="col">Fecha alta</th>
+                <th  scope="col">Fecha revisión</th>
+                <th  scope="col">Fecha solución</th>
+                <th  scope="col">Comentario</th>
+                <th  scope="col" colspan="3" class="text-center">Operaciones</th>
+              </tr>  
+            </thead>
+            <tbody class="fondo">
+              <tr>
+  
+                <?php
+                  $query="SELECT * FROM Incidencias";               
+                  $vista_incidencias= mysqli_query($conn,$query);
+                  while($row= mysqli_fetch_assoc($vista_incidencias)){
+                    $id = $row['id'];                
+                    $planta = $row['planta'];        
+                    $aula = $row['aula'];         
+                    $descripcion = $row['descripcion'];        
+                    $fecha_de_alta = $row['fecha_de_alta'];        
+                    $fecha_de_revision = $row['fecha_de_revision'];        
+                    $fecha_de_resolucion = $row['fecha_de_resolucion'];        
+                    $comentario = $row['comentario']; 
+                    echo "<tr >";
+                    echo " <th scope='row' >{$id}</th>";
+                    echo " <td > {$planta}</td>";
+                    echo " <td > {$aula}</td>";
+                    echo " <td >{$descripcion} </td>";
+                    echo " <td >{$fecha_de_alta} </td>";
+                    echo " <td >{$fecha_de_revision} </td>";
+                    echo " <td >{$fecha_de_resolucion} </td>";
+                    echo " <td >{$comentario} </td>";
+                    echo " <td class='text-center'> <a href='ver.php?incidencia_id={$id}' class='btn btn-primary'> <i class='bi bi-eye'></i> Ver</a> </td>";
+                    echo " <td class='text-center' > <a href='editar.php?editar&incidencia_id={$id}' class='btn btn-secondary'><i class='bi bi-pencil'></i> Editar</a> </td>";
+                    echo " <td class='text-center'>  <a href='eliminar.php?eliminar={$id}' class='btn btn-danger'> <i class='bi bi-trash'></i> Eliminar</a> </td>";
+                    echo " </tr> ";
+                  }
+                  
+                ?>
+              </tr>  
+            </tbody>
+          </table>
+
+          <div class="card">
+            <?php
+              $contador = "SELECT COUNT(*) id FROM Incidencias";
+              $resultado = mysqli_query($conn,$contador);
+              $fila = mysqli_fetch_assoc($resultado);
+
+              $contador2 = "SELECT COUNT(*) id FROM Incidencias WHERE fecha_de_resolucion IS NOT NULL";
+              $resultado2 = mysqli_query($conn,$contador2);
+              $fila2 = mysqli_fetch_assoc($resultado2);
+
+              $contador3 = "SELECT COUNT(*) id FROM Incidencias WHERE fecha_de_resolucion IS NULL";
+              $resultado3 = mysqli_query($conn,$contador3);
+              $fila3 = mysqli_fetch_assoc($resultado3);
+
+                      
+              echo 'Numero total de incidencias registradas: ' .$fila['id'];
+              echo '<br>';
+              echo 'Número de incidencias resueltas: ' .$fila2['id'];
+              echo '<br>';
+              echo 'Número de incidencias no resueltas: ' .$fila3['id'];
+            ?>
+          </div>
+        
+</div>
+
 
 <div class="colocar">
     <button>
@@ -75,7 +123,12 @@
         </svg>
     </button>
 </div>
+
+
 <footer class="blockquote-footer fixed-bottom">Gestión de incidencias del <a href="https://iesamachado.org" target="_blank">IES Antonio Machado</a>. Desarrollado por Pablo Jesús Pozo</footer>
 
 </body>
 </html>
+
+
+
